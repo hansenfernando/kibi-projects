@@ -53,3 +53,8 @@ echo "Brew status on Standard User"
 echo "============================================"
 brew doctor
 echo "============================================"
+echo "Add $(whoami) to group _developer"
+echo "============================================"
+echo "Insert $(whoami) password: "
+sudo dscl . append /Groups/_developer GroupMembership $(whoami)
+echo "===$(whoami) added to _developer group successfully==="
